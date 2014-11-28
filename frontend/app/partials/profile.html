@@ -1,0 +1,102 @@
+<div class="profile">
+    <div class="row">
+        <div class="col-sm-3 profile-card">
+            <div class="profile-photo">
+                <img id="me-photo" src="{{user.avatar}}"/>
+                
+                <i class="fa fa-8x fa-user">{{user.avatar}}</i>
+            </div>
+            <h2 class="alias">{{user.nick}}</h2>
+            <h4 class="name">{{user.nombre}} {{user.apellidos}}</h4>
+            <div class="profile-field">
+                <i class="fa fa-envelope-o"></i>
+                <span>{{user.email}}</span>
+            </div>
+            <div class="profile-field">
+                <i class="fa fa-clock-o"></i>
+                <span data-moment="{{user.fecha_registro}}" data-no-ago data-format="ll"></span>
+            </div>
+            <div class="profile-field">
+                <i class="fa fa-phone"></i>
+                <span>{{user.numero_telefono}}</span>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <!--
+            <div class="row">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>
+                </ul>
+            </div>
+               -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                              <span>Ficha completa</span>
+                              <span class="pull-right">
+                                <i class="fa fa-pencil-square-o"></i>
+                              </span>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled">
+                                        <li><b>Nombre</b>: <span>{{user.nombre}}</span></li>
+                                        <li><b>Apellidos</b>: <span>{{user.apellidos}}</span></li>
+                                        <li><b>DNI</b>: <span>{{user.dni}}</span></li>
+                                        <li><b>Cumpleaños</b>: <span>{{user.cumpleanios}}</span></li>
+                                        <li><b>Lugar de nacimiento</b>: <span>{{user.lugar_nacimiento}}</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled">
+                                        <li><b>Escuela</b>: <span>{{user.escuela}}</span></li>
+                                        <li><b>Email</b>: <span>{{user.email}}</span></li>
+                                        <li><b>Telefono</b>: <span>{{user.numero_telefono}}</span></li>
+                                        <li><b>DNI</b>: <span>{{user.dni}}</span></li>
+                                        <li><b>Cumpleaños</b>: <span>{{user.cumpleanios}}</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Renovaciones</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li ng-repeat="renovacion in user.renovaciones"
+                                    data-moment="{{user.ultima_renovacion}}" data-format="ll" data-no-ago>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Prestamos activos</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li ng-repeat="renovacion in user.renovaciones"
+                                    data-moment="{{user.ultima_renovacion}}" data-format="ll" data-no-ago>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

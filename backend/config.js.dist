@@ -1,0 +1,7 @@
+/*
+	CONFIG DISTRIBUTION FILE
+	Change this file and copy it to config.js
+*/
+module.exports = {
+    port: 3000
+}
